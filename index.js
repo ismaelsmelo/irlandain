@@ -23,6 +23,4 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2W3q_XvHB6M-hamGZ9S9FiasfBrOyxSM&callback=initMap">
     </script>
   </body>
-
-
 </html>
