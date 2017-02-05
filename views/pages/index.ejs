@@ -6,6 +6,18 @@
     html, body { height: 100%; margin: 0; padding: 0; }
     #map { height: 100%; }
   </style>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+  </style>
 </head>
 
 <body>
@@ -20,8 +32,24 @@
         center: {lat: 53.335474, lng: -6.280748},
         zoom: 8
       });
-    }
-  </script>
+
+  // [START snippet-load]
+  // Load GeoJSON.
+  map.data.loadGeoJson('https://storage.googleapis.com/maps-devrel/google.json');
+  // [END snippet-load]
+
+  // [START snippet-style]
+  // Set the stroke width, and fill color for each polygon
+  map.data.setStyle({
+    fillColor: 'green',
+    strokeWeight: 1
+  });
+  // [END snippet-style]
+}
+
+    </script>
+  
+  
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2W3q_XvHB6M-hamGZ9S9FiasfBrOyxSM&callback=initMap">
   </script>
